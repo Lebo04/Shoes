@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* landing page styling */
+
+.landing-page {
+  background: url(https://i.postimg.cc/sxQvf1vx/women-shoes-realistic-background-vector.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home {
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 160px;
+}
+
+.home .stock {
+  font-size: 20px;
+}
+
+/* shoes page styling */
+
+.sandals .title,
+.sneakers .title,
+.heels .title {
+  text-align: center;
+  justify-content: center;
+}
+
+/* .sandals .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background: #111;
+  transform: translateX(-50%);
+}
+.sandals .title::after {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  background: #fff;
+  transform: translateX(-50%);
+} */
