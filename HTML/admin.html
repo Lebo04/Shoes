@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d011494e22.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg"
+      style="background-color: rgb(222, 191, 181)"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">K.G Shoes</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Shoes
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./sandals.html">Sandals</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./sneakers.html">Sneakers</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="./heels.html">Hills</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./checkout.html">Checkout</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+    >
+      Sorting
+    </button>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Sort</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-check">
+              <input
+                class="form-check-input id"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                id
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input pName"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Product name
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input price"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                Price
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input size"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                Size
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary save">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop1"
+    >
+      Add Product
+    </button>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Product</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label for="exampleDataList" class="form-label"
+              >Product Name</label
+            >
+            <input
+              class="form-control product"
+              list="datalistOptions"
+              id="exampleDataList"
+              placeholder="Type to search..."
+            />
+            <datalist id="datalistOptions">
+              <option value="Platform Heel"></option>
+              <option value="Stiletto Heel"></option>
+              <option value="Block Heel"></option>
+              <option value="Pencil Heel"></option>
+              <option value="Slides"></option>
+              <option value="Flat Sandal"></option>
+              <option value="Karryn Flat Sandals"></option>
+              <option value="Superga Alpina Boot"></option>
+              <option value="New Balance 550"></option>
+              <option value="Air Force 1"></option>
+              <option value="Asics Gel-Lyte III"></option>
+            </datalist>
+            <label for="exampleDataList" class="form-label"
+              >Size</label
+            >
+            <input
+              class="form-control size"
+              list="datalistOptions1"
+              id="exampleDataList"
+              placeholder="Type to search..."
+            />
+            <datalist id="datalistOptions1">
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+              <option value="5"></option>
+              <option value="6"></option>
+            </datalist>
+            <label for="exampleDataList" class="form-label"
+              >Color</label
+            >
+            <input
+              class="form-control colour"
+              list="datalistOptions2"
+              id="exampleDataList"
+              placeholder="Type to search..."
+            />
+            <datalist id="datalistOptions2">
+              <option value="Black"></option>
+              <option value="White"></option>
+              <option value="Beige"></option>
+              <option value="Red"></option>
+              <option value="Navy"></option>
+              <option value="Gold"></option>
+            </datalist>
+            <label for="exampleDataList" class="form-label"
+              >Price</label
+            >
+            <input
+              class="form-control price"
+              list="datalistOptions3"
+              id="exampleDataList"
+              placeholder="Type to search..."
+            />
+            <datalist id="datalistOptions3">
+              <option value="200"></option>
+              <option value="250"></option>
+              <option value="350"></option>
+              <option value="400"></option>
+              <option value="450"></option>
+              <option value="500"></option>
+              <option value="1200"></option>
+              <option value="1500"></option>
+              <option value="1700"></option>
+            </datalist>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary save">Save</button>
+            <button type="button" class="btn btn-primary submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Size</th>
+          <th>Color</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JavaScript/script.js"></script>
+  </body>
+</html>
