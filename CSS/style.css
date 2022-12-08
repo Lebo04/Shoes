@@ -62,3 +62,15 @@
 button {
   border: none;
 }
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  margin-top: 1rem;
+}
+
+.one {
+  margin-right: 1rem;
+  
+}
