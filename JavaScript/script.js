@@ -38,9 +38,8 @@ let heels = [
       "https://i.postimg.cc/4N6T7Mmw/image-dd6ad32a-f4da-43ee-a3ff-534ae95625c3-700x700.webp",
   },
 ];
-let heelsList = JSON.parse(localStorage.getItem("heels"))
-  ? JSON.parse(localStorage.getItem("heels"))
-  : JSON.parse(localStorage.setItem("heels", JSON.stringify(heels)));
+
+localStorage.setItem("heels", JSON.stringify(heels));
 
 async function display() {
   let data = document.querySelector(".item");
