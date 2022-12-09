@@ -216,16 +216,14 @@
             <div class="modal-body">
               <label for="id" class="col-sm-2 col-form-label">id</label>
 
-              <input type="text" class="form-control id" id="id" />
+              <input type="text" class="form-control id" id="id" placeholder="Enter product id" />
 
               <label for="exampleDataList" class="form-label"
                 >Product Name</label
               >
               <select
                 class="form-control product"
-                list="datalistOptions"
                 id="product"
-                placeholder="Type to search..."
               >
                 <option>Select</option>
                 <option value="Platform Heel">Platform Heel</option>
@@ -243,9 +241,7 @@
               <label for="exampleDataList" class="form-label">Size</label>
               <select
                 class="form-control size"
-                list="datalistOptions1"
                 id="size"
-                placeholder="Type to search..."
               >
                 <option>Select</option>
                 <option value="2">2</option>
@@ -255,12 +251,14 @@
                 <option value="6">6</option>
               </select>
 
+              <label for="image" class="form-label">Image</label>
+              <div><input type="text" class="form-control" id="image" placeholder="Enter product url"></div>
+              
+
               <label for="exampleDataList" class="form-label">Color</label>
               <select
                 class="form-control color"
-                list="datalistOptions2"
                 id="exampleDataList"
-                placeholder="Type to search..."
               >
                 <option>Select</option>
                 <option value="Black">Black</option>
@@ -274,9 +272,7 @@
               <label for="exampleDataList" class="form-label">Price</label>
               <select
                 class="form-control price"
-                list="datalistOptions3"
                 id="price"
-                placeholder="Type to search..."
               >
                 <option>Select</option>
                 <option value="200">200</option>
@@ -301,6 +297,95 @@
               <button type="button" class="btn btn-primary submit">
                 Submit
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-primary two"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop2"
+      >
+        Filtering
+      </button>
+
+      <div
+        class="modal fade"
+        id="staticBackdrop2"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Filter</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-check">
+                <input
+                  class="form-check-input id"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  id
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input pName"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Product name
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input price"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Price
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input size"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Size
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary save">Save</button>
             </div>
           </div>
         </div>

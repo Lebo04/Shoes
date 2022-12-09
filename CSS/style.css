@@ -70,7 +70,11 @@ button {
   margin-top: 1rem;
 }
 
-.one {
+.one{
   margin-right: 1rem;
   
+}
+
+.two {
+  margin-left: 1rem;
 }
