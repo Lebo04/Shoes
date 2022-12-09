@@ -40,6 +40,7 @@ let heels = [
 ];
 
 localStorage.setItem("heels", JSON.stringify(heels));
+let heelsList = JSON.parse(localStorage.getItem("heels"));
 
 async function display() {
   let data = document.querySelector(".item");
