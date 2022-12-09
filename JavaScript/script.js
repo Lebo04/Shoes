@@ -39,6 +39,11 @@ let heels = [
   },
 ];
 
+// function to add items to the cart
+function addToCart(){
+  alert("add button clicked");
+};
+
 localStorage.setItem("heels", JSON.stringify(heels));
 let heelsList = JSON.parse(localStorage.getItem("heels"));
 
@@ -58,7 +63,7 @@ async function display() {
         <h5 class="card-title">${item.name}</h5>
         <p class="card-text">${item.description}</p>
         <p class="price">R${item.price}</p>
-        <a href="" class="btn btn-primary cart" }
+        <a href="" class="btn btn-primary cart" onclick="addToCart()"
           >Add to cart</a
         >
       </div>
@@ -77,13 +82,24 @@ localStorage.setItem("cart", JSON.stringify(checkout));
 let cart = JSON.parse(localStorage.getItem("cart"));
 
 let addProduct = document.querySelectorAll(".cart");
-addProduct.forEach((item) => {
-  item.addEventListener("click", () => {
-    let y = parseInt(item.id);
-    addProductToCart(y - 1);
-    console.log(addProductToCart(y - 1));
-  });
-});
+function addCart() {
+  let y = parseInt(item.id);
+  addProductToCart(y - 1);
+  console.log(addProductToCart(y - 1));
+  if (cart.includes(sandals[i])) {
+  } else {
+    sandals[i].qty = 1;
+    cart.push(sandals[i]);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+}
+// addProduct.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     let y = parseInt(item.id);
+//     addProductToCart(y - 1);
+//     console.log(addProductToCart(y - 1));
+//   });
+// });
 
 function addProductToCart(i) {
   if (cart.includes(sandals[i])) {
