@@ -37,12 +37,47 @@ let heels = [
     image:
       "https://i.postimg.cc/4N6T7Mmw/image-dd6ad32a-f4da-43ee-a3ff-534ae95625c3-700x700.webp",
   },
+  {
+    id: 5,
+    name: "Pump Heel",
+    description: "Available in Black, Navy, Gold, Red and White.",
+    color: "Gold",
+    size: 2,
+    price: 250,
+    image:
+      "https://i.postimg.cc/qMQLJ7dT/9304592-fpx.jpg",
+  },
+  {
+    id: 6,
+    name: "Ankle Strap Heel",
+    description: "Available in Black, Navy, Gold, Red and White.",
+    color: "Gold",
+    size: 2,
+    price: 450,
+    image:
+      "https://i.postimg.cc/N0y2FFY9/images.jpg",
+  },
+  {
+    id: 7,
+    name: "Wedge Heel",
+    description: "Available in Black, Navy, Gold, Red, Brown and White.",
+    color: "Brown",
+    size: 4,
+    price: 300,
+    image:
+      "https://i.postimg.cc/2yjzq9vc/s-pdpxl.jpg",
+  },
+  {
+    id: 8,
+    name: "Cut Out Heel",
+    description: "Available in Black, Navy, Gold, Red and White.",
+    color: "Gold",
+    size: 2,
+    price: 550,
+    image:
+      "https://i.postimg.cc/gcB9q0Pk/6-Cut-Out-Heels.jpg",
+  },
 ];
-
-// function to add items to the cart
-function addToCart() {
-  alert("add button clicked");
-}
 
 localStorage.setItem("heels", JSON.stringify(heels));
 let heelsList = JSON.parse(localStorage.getItem("heels"));
