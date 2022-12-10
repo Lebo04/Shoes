@@ -52,8 +52,8 @@ async function display() {
   data.innerHTML = "";
   heelsList.forEach((item) => {
     data.innerHTML += `
-    <div class=col-6>
-    <div class="card" style="width: 18rem">
+    <div class=col-md-6 g-3>
+    <div class="card data" style="width: 18rem">
       <img
         src="${item.image}"
         width=""
