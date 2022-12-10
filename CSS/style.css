@@ -16,10 +16,10 @@
 }
 
 .home {
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
   justify-content: center;
-  margin-top: 160px;
+  margin-top: 9rem;
 }
 
 .home .stock {
