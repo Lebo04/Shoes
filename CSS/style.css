@@ -23,7 +23,7 @@
 }
 
 .home .stock {
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 /* shoes page styling */
@@ -35,29 +35,6 @@
   justify-content: center;
 }
 
-/* .sandals .title::before {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 180px;
-  height: 3px;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  background: #111;
-  transform: translateX(-50%);
-}
-.sandals .title::after {
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  font-size: 20px;
-  background: #fff;
-  transform: translateX(-50%);
-} */
-
-
-/* admin page */
 
 button {
   border: none;
