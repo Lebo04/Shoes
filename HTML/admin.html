@@ -62,13 +62,6 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="./sandals.html">Sandals</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./sneakers.html">Sneakers</a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
                   <a class="dropdown-item" href="./heels.html">Hills</a>
                 </li>
               </ul>
@@ -77,110 +70,12 @@
               <a class="nav-link" href="./checkout.html">Checkout</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
 
     <div class="buttons">
-      <button
-        type="button"
-        class="btn btn-primary one"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
-      >
-        Sorting
-      </button>
-
-      <div
-        class="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Sort</h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="form-check">
-                <input
-                  class="form-check-input id"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  id
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input pName"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                />
-                <label class="form-check-label" for="flexCheckDefault">
-                  Product name
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input price"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  Price
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input size"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  Size
-                </label>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary save">Save</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <button type="button" class="sort">Sort</button>
 
       <button
         type="button"
@@ -216,15 +111,17 @@
             <div class="modal-body">
               <label for="id" class="col-sm-2 col-form-label">id</label>
 
-              <input type="text" class="form-control id" id="id" placeholder="Enter product id" />
+              <input
+                type="text"
+                class="form-control id"
+                id="id"
+                placeholder="Enter product id"
+              />
 
               <label for="exampleDataList" class="form-label"
                 >Product Name</label
               >
-              <select
-                class="form-control product"
-                id="product"
-              >
+              <select class="form-control product" id="product" required>
                 <option>Select</option>
                 <option value="Platform Heel">Platform Heel</option>
                 <option value="Stiletto Heel">Stiletto Heel</option>
@@ -239,10 +136,7 @@
                 <option value="Asics Gel-Lyte III">Asics Gel-Lyte III</option>
               </select>
               <label for="exampleDataList" class="form-label">Size</label>
-              <select
-                class="form-control size"
-                id="size"
-              >
+              <select class="form-control size" id="size">
                 <option>Select</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -252,14 +146,17 @@
               </select>
 
               <label for="image" class="form-label">Image</label>
-              <div><input type="text" class="form-control" id="image" placeholder="Enter product url"></div>
-              
+              <div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="image"
+                  placeholder="Enter product url"
+                />
+              </div>
 
               <label for="exampleDataList" class="form-label">Color</label>
-              <select
-                class="form-control color"
-                id="exampleDataList"
-              >
+              <select class="form-control color" id="exampleDataList">
                 <option>Select</option>
                 <option value="Black">Black</option>
                 <option value="White">White</option>
@@ -270,10 +167,7 @@
               </select>
 
               <label for="exampleDataList" class="form-label">Price</label>
-              <select
-                class="form-control price"
-                id="price"
-              >
+              <select class="form-control price" id="price">
                 <option>Select</option>
                 <option value="200">200</option>
                 <option value="250">250</option>
@@ -301,92 +195,73 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <button
-        type="button"
-        class="btn btn-primary two"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop2"
-      >
-        Filtering
-      </button>
-
-      <div
-        class="modal fade"
-        id="staticBackdrop2"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Filter</h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="form-check">
-                <input
-                  class="form-check-input id"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  id
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input pName"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                />
-                <label class="form-check-label" for="flexCheckDefault">
-                  Product name
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input price"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  Price
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input size"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  Size
-                </label>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Updating</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >id</label
               >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary save">Save</button>
+              <input type="number" class="form-control" id="ids" />
             </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Product Name</label
+              >
+              <input type="text" class="form-control" id="names" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput2" class="form-label"
+                >Price</label
+              >
+              <input type="text" class="form-control" id="prices" rows="3" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput2" class="form-label"
+                >Size</label
+              >
+              <input type="text" class="form-control" id="sizes" rows="3" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput3" class="form-label"
+                >Color</label
+              >
+              <input type="text" class="form-control" id="colors" rows="3" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary changes"
+              onclick="edit()"
+            >
+              Save Changes
+            </button>
           </div>
         </div>
       </div>

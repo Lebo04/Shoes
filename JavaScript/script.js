@@ -40,9 +40,9 @@ let heels = [
 ];
 
 // function to add items to the cart
-function addToCart(){
+function addToCart() {
   alert("add button clicked");
-};
+}
 
 localStorage.setItem("heels", JSON.stringify(heels));
 let heelsList = JSON.parse(localStorage.getItem("heels"));
@@ -63,8 +63,8 @@ async function display() {
         <h5 class="card-title">${item.name}</h5>
         <p class="card-text">${item.description}</p>
         <p class="price">R${item.price}</p>
-        <a href="" class="btn btn-primary cart" onclick="addToCart()"
-          >Add to cart</a
+        <button class="btn btn-primary cart" id="${item.id}" onclick="addCart(${item.id})"
+          >Add to checkout</button
         >
       </div>
       </div>
@@ -81,31 +81,31 @@ let checkout = [];
 localStorage.setItem("cart", JSON.stringify(checkout));
 let cart = JSON.parse(localStorage.getItem("cart"));
 
-let addProduct = document.querySelectorAll(".cart");
-function addCart() {
-  let y = parseInt(item.id);
-  addProductToCart(y - 1);
-  console.log(addProductToCart(y - 1));
-  if (cart.includes(sandals[i])) {
+function addCart(i) {
+  if (cart.includes(heelsList[i])) {
+    heelsList[i].quantity++;
+    localStorage.setItem("cart", JSON.stringify(cart));
   } else {
-    sandals[i].qty = 1;
-    cart.push(sandals[i]);
+    heelsList[i].quantity = 1;
+    cart.push(heelsList[i]);
     localStorage.setItem("cart", JSON.stringify(cart));
   }
 }
-// addProduct.forEach((item) => {
-//   item.addEventListener("click", () => {
-//     let y = parseInt(item.id);
-//     addProductToCart(y - 1);
-//     console.log(addProductToCart(y - 1));
-//   });
-// });
 
-function addProductToCart(i) {
-  if (cart.includes(sandals[i])) {
-  } else {
-    sandals[i].qty = 1;
-    cart.push(sandals[i]);
-    localStorage.setItem("cart", JSON.stringify(cart));
+
+let shoe = document.querySelector('.shoe');
+let item = document.querySelector('.item');
+
+shoe.addEventListener('keyup', ()=> {
+  try{
+      if(!shoe.value.length) throw "Enter a shoe name";
+      heelsList = heelsList.filter((items)=>{
+          return items.name.toLowerCase().
+          includes(shoe.value.toLowerCase())
+      })
+      if(!heelsList.length) throw "This shoe is not yet available";
+      display();            
+  }catch(e) {
+      item.innerHTML = e;
   }
-}
+})

@@ -13,7 +13,7 @@ async function displayContent() {
           <td>R${item.price}</td>
           <td>${item.size}</td>
           <td>${item.color}</td>
-          <td><button class="pen"><i class="fa-solid fa-pen-to-square"></i></button></td>
+          <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateProduct(${item.id})"><i class="fa-solid fa-pen-to-square"></i></button></td>
           <td><button class="delete" onclick="deleteProduct(this)"><i class="fa-solid fa-trash"></i></button></td>
           </tr>
           `;
@@ -63,23 +63,51 @@ function deleteProduct(data) {
   localStorage.setItem("heels", JSON.stringify(contents));
 }
 
-let save = document.querySelector(".save");
-save.addEventListener("click", function sorting() {
-  let productName = document.querySelector(".pName");
-  localStorage.getItem("content", JSON.stringify(content));
-  if (productName.checked) {
-    content.sort();
-  }
-  displayContent();
-});
 
 // Updating
+let editID = 0;
+function updateProduct(i) {
+  let product = contents[i - 1];
+  console.log(product);
+  document.querySelector("#ids").value = product.id;
+  document.querySelector("#names").value = product.name;
+  document.querySelector("#sizes").value = product.size;
+  document.querySelector("#colors").value = product.color;
+  document.querySelector("#prices").value = product.price;
+  editID = i;
 
-// let edit = document.querySelector(".pen");
+}
 
-// edit.addEventListener('click', (e) => {
-//   e.preventDefault();
 
-// })
+function edit() {
+  let product = contents[editID - 1];
+  console.log(product);
+  product.id = document.querySelector("#ids").value;
+  product.name = document.querySelector("#names").value;
+  product.size = document.querySelector("#sizes").value;
+  product.color = document.querySelector("#colors").value;
+  product.price = document.querySelector("#prices").value;
 
-// Filtering
+  localStorage.setItem('heels', JSON.stringify(contents))
+  displayContent();1
+}
+ 
+
+
+// Sort Products
+
+let sort = document.querySelector(".sort");
+sort.addEventListener("click", () => {
+  contents.sort();
+  contents.sort((a, b) => {
+    if (a.name.toLowerCase() < b.name.toLowerCase()) {
+      return -1;
+    } else if (a.name.toLowerCase() > b.name.toLowerCase()) {
+      return 1
+    } else {
+      return 0
+    }
+  });
+  localStorage.setItem('sort', JSON.stringify(contents));
+  displayContent();
+});

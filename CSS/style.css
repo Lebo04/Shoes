@@ -70,11 +70,22 @@ button {
   margin-top: 1rem;
 }
 
-.one{
+.sort{
   margin-right: 1rem;
-  
+  width: 5rem;
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 0.3rem;
 }
 
 .two {
   margin-left: 1rem;
+}
+
+.total {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
 }
