@@ -22,6 +22,8 @@ async function displayContent() {
 
 displayContent();
 
+// Adding Product
+
 let submit = document.querySelector(".submit");
 
 submit.addEventListener("click", (e) => {
@@ -44,6 +46,8 @@ submit.addEventListener("click", (e) => {
 
   displayContent();
 });
+
+// Delete Product
 
 function deleteProduct(data) {
   let id = document.querySelector("#id").value;
@@ -68,20 +72,17 @@ function deleteProduct(data) {
 let editID = 0;
 function updateProduct(i) {
   let product = contents[i - 1];
-  console.log(product);
   document.querySelector("#ids").value = product.id;
   document.querySelector("#names").value = product.name;
   document.querySelector("#sizes").value = product.size;
   document.querySelector("#colors").value = product.color;
   document.querySelector("#prices").value = product.price;
-  editID = i;
-
+  editID = i; 
 }
 
 
 function edit() {
   let product = contents[editID - 1];
-  console.log(product);
   product.id = document.querySelector("#ids").value;
   product.name = document.querySelector("#names").value;
   product.size = document.querySelector("#sizes").value;

@@ -49,6 +49,7 @@ let heelsList = JSON.parse(localStorage.getItem("heels"));
 
 async function display() {
   let data = document.querySelector(".item");
+  data.innerHTML = "";
   heelsList.forEach((item) => {
     data.innerHTML += `
     <div class=col-6>
@@ -92,20 +93,20 @@ function addCart(i) {
   }
 }
 
+// Filtering a Product
 
-let shoe = document.querySelector('.shoe');
-let item = document.querySelector('.item');
+let shoe = document.querySelector(".shoe");
+let item = document.querySelector(".item");
 
-shoe.addEventListener('keyup', ()=> {
-  try{
-      if(!shoe.value.length) throw "Enter a shoe name";
-      heelsList = heelsList.filter((items)=>{
-          return items.name.toLowerCase().
-          includes(shoe.value.toLowerCase())
-      })
-      if(!heelsList.length) throw "This shoe is not yet available";
-      display();            
-  }catch(e) {
-      item.innerHTML = e;
+shoe.addEventListener("keyup", () => {
+  try {
+    if (!shoe.value.length) throw "Enter a shoe name";
+    heelsList = heelsList.filter((items) => {
+      return items.name.toLowerCase().includes(shoe.value.toLowerCase());
+    });
+    if (!heelsList.length) throw "This shoe is not yet available";
+  } catch (data) {
+    item.innerHTML = data;
   }
-})
+  display();
+});
