@@ -29,8 +29,6 @@
 
 /* shoes page styling */
 
-.sandals .title,
-.sneakers .title,
 .heels .title {
   text-align: center;
   justify-content: center;
@@ -47,25 +45,6 @@ button {
   margin-top: 1rem;
 }
 
-.sort {
-  margin-right: 1rem;
-  width: 5rem;
-  background-color: #0d6efd;
-  color: #fff;
-  border-radius: 0.3rem;
-}
-
-.two {
-  margin-left: 1rem;
-}
-
-.total {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
 
 footer {
   background-color: crimson;
@@ -75,9 +54,7 @@ footer {
   background: #111;
   color: #fff;
   padding: 30px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+
 }
 
 footer th {
@@ -114,5 +91,24 @@ footer p {
 
 /* Media Queries */
 
-@media screen and (max-width) {
+/* @media screen and (max-width: 310px) {
+  .container {
+    scale: 0.95;
+  }
 }
+
+@media screen and (min-width:1000px) and ( max-width: 1200px) {
+  .container {
+    scale: 1.4;
+    margin-top: 90px;
+    height: 460px;
+    line-height: 50px;
+    width: 300px;
+  }
+  .display-top,
+.display-bottom {
+  height: 60px;
+}
+
+} */
+

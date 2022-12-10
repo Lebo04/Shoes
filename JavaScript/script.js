@@ -105,8 +105,8 @@ shoe.addEventListener("keyup", () => {
       return items.name.toLowerCase().includes(shoe.value.toLowerCase());
     });
     if (!heelsList.length) throw "This shoe is not yet available";
+    display();
   } catch (data) {
     item.innerHTML = data;
   }
-  display();
 });
